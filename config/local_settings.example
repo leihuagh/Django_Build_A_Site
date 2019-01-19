@@ -1,0 +1,21 @@
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '<MySQL database name>',
+        'USER': '<username>',
+        'PASSWORD': '<password>',
+        'HOST': '<Your MySQL Server Host>',
+        'PORT': '<Your MySQL Port>',
+        'OPTIONS': {
+            'init_command': 'SET innodb_strict_mode=1',
+            'sql_mode': 'STRICT_TRANS_TABLES',
+            'charset': 'utf8mb4'
+        }
+    }
+}
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'Your project secret key settings'
