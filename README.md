@@ -34,3 +34,4 @@
 ## Templates
 
 - Home Page: Bootstrap 4.2 jumbotron
+- About Page: Bootstrap 4.2 album
