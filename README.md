@@ -35,3 +35,4 @@
 
 - Home Page: Bootstrap 4.2 jumbotron
 - About Page: Bootstrap 4.2 album
+- Contact Page: Bootstrap 4.2 checkout form
