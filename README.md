@@ -30,3 +30,7 @@
 - common
 - authentication
 - users
+
+## Templates
+
+- Home Page: Bootstrap 4.2 jumbotron
