@@ -6,7 +6,7 @@
 {% endblock head_title %}
 
 {% block local_css %}
-        <link href="{% static 'css/themes/form-validation.css' %}" rel="stylesheet">
+    <link href="{% static 'css/themes/form-validation.css' %}" rel="stylesheet">
 {% endblock local_css %}
 
 {% block main_contents %}
@@ -19,26 +19,22 @@
           <form method="POST" class="needs-validation" novalidate> {% csrf_token %}
           <div class="mb-3">
             <label for="fullname">Full Name</label>
-            <input type="text" class="form-control" id="fullname" placeholder="Your Full Name" required>
+            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Your Full Name" required>
             <div class="invalid-feedback">
               Please enter your full name
             </div>
           </div>
           <div class="mb-3">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
             <div class="invalid-feedback">
               Please enter a valid email 
             </div>
           </div>
           <div class="mb-3">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password" required>
-          </div>
-          <div class="mb-3">
-            <label for="repassword">Confirm Password</label>
-            <input type="password" class="form-control" id="repassword" placeholder="Confirm Password" required>
-          </div>
+            <label for="content">Content</label>
+            <textarea name="content" id="content" rows="4" class="form-control" placeholder="Content" required></textarea>
+          </div>          
           <hr class="mb-4">
           <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
         </form>
