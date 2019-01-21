@@ -17,7 +17,8 @@
       <div class="row">
         <div class="col-md-12 order-md-1">
           <form method="POST" class="needs-validation" novalidate> {% csrf_token %}
-          <div class="mb-3">
+          {{ form }}
+          {% comment %} <div class="mb-3">
             <label for="fullname">Full Name</label>
             <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Your Full Name" required>
             <div class="invalid-feedback">
@@ -34,7 +35,7 @@
           <div class="mb-3">
             <label for="content">Content</label>
             <textarea name="content" id="content" rows="4" class="form-control" placeholder="Content" required></textarea>
-          </div>          
+          </div>           {% endcomment %}
           <hr class="mb-4">
           <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
         </form>
