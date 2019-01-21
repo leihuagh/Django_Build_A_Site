@@ -1,1 +1,26 @@
-<h1>Login</h1>
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %}
+- Login
+{% endblock head_title %}
+
+{% block local_css %}
+    <link href="{% static 'css/themes/form-validation.css' %}" rel="stylesheet">
+{% endblock local_css %}
+
+{% block main_contents %}
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2>Login Form</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12 order-md-1">
+          <form method="POST" class="needs-validation" novalidate> {% csrf_token %}
+          {{ form }}          
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+{% endblock main_contents %}
