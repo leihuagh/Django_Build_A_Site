@@ -1,13 +1,18 @@
 from django.shortcuts import render
+from core.utils import check_authentication
 from .forms import ContactForm
 
 
 def index(request):
-    return render(request, 'index.html', {})
+    context = {}
+    context = check_authentication(request, context)
+    return render(request, 'index.html', context)
 
 
 def about(request):
-    return render(request, 'about.html', {})
+    context = {}
+    context = check_authentication(request, context)
+    return render(request, 'about.html', context)
 
 
 def contact(request):
@@ -15,6 +20,7 @@ def contact(request):
     context = {
         "form": form
     }
+    context = check_authentication(request, context)
     if form.is_valid():
         print(form.cleaned_data)
 

@@ -28,15 +28,18 @@
                 </li>
             </ul>
             <ul class="navbar-nav my-2 my-md-0 mr-md-3">
+                {% if authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                </li>
+                {% else %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'users:register' %}">Register</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">Logout</a>
-                </li>
+                {% endif %} 
             </ul>
         </div>
     </nav>
