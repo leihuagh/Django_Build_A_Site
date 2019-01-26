@@ -30,6 +30,7 @@
 - common
 - authentication
 - users
+- products
 
 ## Templates
 
