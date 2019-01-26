@@ -14,10 +14,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact'%}">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                </li>                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -29,6 +26,9 @@
             </ul>
             <ul class="navbar-nav my-2 my-md-0 mr-md-3">
                 {% if authenticated %}
+                <li class="nav-item active">
+                    <a class="nav-link disabled" href="#">Welcome {{ user.first_name }}</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 </li>
@@ -37,7 +37,7 @@
                     <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'users:register' %}">Register</a>
+                    <a class="nav-link" href="{% url 'register' %}">Register</a>
                 </li>
                 {% endif %} 
             </ul>
