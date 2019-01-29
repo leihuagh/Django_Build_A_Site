@@ -16,4 +16,4 @@ def register_view(request):
         password = form.cleaned_data.get('password')
         new_user = User.objects.create_user(username, email, password)
 
-    return render(request, 'users/register.html', context)
+    return render(request, 'register.html', context)

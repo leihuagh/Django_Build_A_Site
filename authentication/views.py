@@ -20,7 +20,7 @@ def login_view(request):
         else:
             print('Error')
 
-    return render(request, "auth/login.html", context)
+    return render(request, "login.html", context)
 
 
 def logout_view(request):
