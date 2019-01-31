@@ -10,12 +10,12 @@
 ### Global Level
 
 - Python 3.7.2
-- virturalenv 6.2.0
+- virturalenv 6.3.0
 
 ### Project Level
 
 - Django 2.1.5
-- mysqlclient: download `mysqlclient‑1.3.13‑cp37‑cp37m‑win_amd64.whl` from [https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient)
+- mysqlclient: download `mysqlclient‑1.4.1‑cp37‑cp37m‑win_amd64.whl` from [https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient)
 - pillow
 
 ## File System Structure
@@ -37,3 +37,4 @@
 - Home Page: Bootstrap 4.2 jumbotron
 - About Page: Bootstrap 4.2 album
 - Contact Page: Bootstrap 4.2 checkout form
+- Product List Page: Bootstrap 4.2 album
