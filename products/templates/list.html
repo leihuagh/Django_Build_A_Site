@@ -1,1 +1,9 @@
-<h1>Product List</h1>
+{% extends "base.html" %}
+
+{% block head_title %}
+- Product List
+{% endblock head_title %}
+
+{% block main_contents %}
+{{ products }}
+{% endblock main_contents %}
