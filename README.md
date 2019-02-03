@@ -32,6 +32,50 @@
 - users
 - products
 
+## Commands
+
+### Create a Project
+
+```shell
+django-admin startproject config .
+```
+
+### Create the apps
+
+```shell
+python manage.py startapp core
+python manage.py startapp common
+python manage.py startapp authentication
+python manage.py startapp users
+python manage.py startapp products
+```
+
+### Make Migrations
+
+```shell
+python manage.py makemigrations
+```
+
+### Migrate
+
+```shell
+python manage.py migrate
+```
+
+### Dump Database Tables
+
+```shell
+python manage.py dumpdata auth.User --format json --indent 4 > texture/users.json
+python manage.py dumpdata products.Product --format json --indent 4 > texture/products.json
+```
+
+### Seed Database Tables
+
+```shell
+python manage.py loaddata texture/users.json
+python manage.py loaddata texture/products.json
+```
+
 ## Templates
 
 - Home Page: Bootstrap 4.2 jumbotron
