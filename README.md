@@ -76,6 +76,18 @@ python manage.py loaddata texture/users.json
 python manage.py loaddata texture/products.json
 ```
 
+## Pagination Variables
+
+```python
+<ul>
+    <li>{{ products.has_previous}}</li>
+    <li>{{ products.number }}</li>
+    <li>{{ products.paginator.count }}</li>
+    <li>{{ products.paginator.page_range }}</li>
+    <li>{{ products.has_next }}</li>
+</ul>
+```
+
 ## Templates
 
 - Home Page: Bootstrap 4.2 jumbotron
