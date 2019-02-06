@@ -2,7 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from core.utils import check_authentication
 from django.views.generic import ListView
-from .models import Product
+from products.models import Product
 
 
 class ProductListView(ListView):
@@ -20,12 +20,3 @@ def list_view(request):
     }
     context = check_authentication(request, context)
     return render(request, 'list.html', context)
-
-
-def detail_view(request, id):
-    product = get_object_or_404(Product, id=id)
-    context = {
-        "product": product
-    }
-    context = check_authentication(request, context)
-    return render(request, 'detail.html', context)
