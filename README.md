@@ -10,12 +10,12 @@
 ### Global Level
 
 - Python 3.7.2
-- virturalenv 6.3.0
+- virturalenv 6.4.0
 
 ### Project Level
 
-- Django 2.1.5
-- mysqlclient: download `mysqlclient‑1.4.1‑cp37‑cp37m‑win_amd64.whl` from [https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient)
+- Django 2.1.7
+- mysqlclient: download `mysqlclient‑1.4.2‑cp37‑cp37m‑win_amd64.whl` from [https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient)
 - pillow
 
 ## File System Structure
@@ -80,11 +80,11 @@ python manage.py loaddata texture/products.json
 
 ```python
 <ul>
-    <li>{{ products.has_previous}}</li>
-    <li>{{ products.number }}</li>
-    <li>{{ products.paginator.count }}</li>
-    <li>{{ products.paginator.page_range }}</li>
-    <li>{{ products.has_next }}</li>
+    <li>{{ <app>.has_previous}}</li>
+    <li>{{ <app>.number }}</li>
+    <li>{{ <app>.paginator.count }}</li>
+    <li>{{ <app>.paginator.page_range }}</li>
+    <li>{{ <app>.has_next }}</li>
 </ul>
 ```
 
